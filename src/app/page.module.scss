@@ -1,0 +1,83 @@
+.root {
+  padding: 100px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .searchJokesBlock {
+    height: 100px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 20px;
+  }
+
+  & .jokesList {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 20px;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 60px;
+
+      & .jokesList_block {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        width: calc(50% - 10px);
+        height: 260px;
+        padding: 40px;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        & .block_title {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-height: 1.5;
+          max-height: 3em;
+        }
+
+        & .block_dateAndIdBlock {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          flex-wrap: wrap;
+
+          & p {
+            font-size: 10px;
+          }
+        }
+
+        @media ((min-width: 200px) and (max-width: 1025px)) {
+          width: 100%;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    & .jokesList_defaultText {
+      color: black;
+    }
+  }
+}
