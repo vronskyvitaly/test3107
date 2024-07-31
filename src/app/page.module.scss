@@ -35,9 +35,9 @@
         flex-direction: column;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
-        width: calc(50% - 10px);
+        width: calc(40% - 10px);
         height: 260px;
-        padding: 40px;
+        padding: 10px;
         transition:
           transform 0.3s,
           box-shadow 0.3s;
@@ -68,8 +68,16 @@
           }
         }
 
-        @media ((min-width: 200px) and (max-width: 1025px)) {
+        @media ((min-width: 400px) and (max-width: 1025px)) {
           width: 100%;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+
+        @media ((min-width: 200px) and (max-width: 400px)) {
+          width: 100%;
+          overflow: hidden;
+          max-width: 300px;
           flex-direction: column;
           flex-wrap: wrap;
         }
